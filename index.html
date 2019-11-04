@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>RREF Calculator</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="grid-container">
+      <header class="item">
+        <h1>Reduced Row-Echelon Form</h1>
+      </header>
+      <span class="choose-size item">Choose the size of your Matrix:</span>
+      <!-- Choose m and n, amount of rows and columns -->
+      <div class="mxn-input item">
+        <div class="mxnRow">
+          <span class="mspan">Number of rows: m = </span>
+          <input class="mxn" type="text" maxlength="1" />
+        </div>
+        <div class="mxnCol">
+          <span class="nspan">Number of columns: n = </span>
+          <input class="mxn" type="text" maxlength="1" />
+        </div>
+      </div>
+      <!-- Make Button -->
+      <div class="button-container item">
+        <button class="button-empty-matrix">Make</button>
+      </div>
+    </div>
+    <script src="js/app.js"></script>
+  </body>
+</html>

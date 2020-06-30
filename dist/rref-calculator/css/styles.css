@@ -160,6 +160,7 @@ hr {
   border-radius: 1vw;
   font-size: 4vw;
   margin: 1vw;
+  padding:0;
   width: 7vw;
   height: 7vw;
   max-width: 60px;

@@ -205,7 +205,7 @@ buttonContainer.firstElementChild.addEventListener("click", () => {
               return matrix;
             }
 
-            reducedRowEchelonForm(arr);
+            reducedRowEchelonForm();
 
             //Outputs the new rref matrix to the screen
 

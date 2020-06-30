@@ -2,27 +2,23 @@ html {
   min-height: 100%;
   min-width: 100%;
 }
-
 body,
 .button-empty-matrix,
 .button-submit,
 .refresh {
   font-family: "Raleway", sans-serif;
 }
-
 body {
   margin: 0;
-  background: linear-gradient(#22c1c3, #fdbb2d);
+  background-color: rgb(192, 192, 192);
   background-repeat: round;
   background-size: cover;
-  color: rgb(32, 30, 30);
+  color: rgb(0, 0, 0);
 }
-
 .grid-container {
   display: grid;
   grid-row-gap: 15px;
 }
-
 .item {
   display: flex;
   flex-direction: row;
@@ -31,31 +27,31 @@ body {
   align-items: center;
   justify-content: center;
 }
-
 header {
   font-size: 3vw;
 }
-
 input {
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   text-align: center;
 }
-
 input[disabled=""] {
   color: black;
   background-color: rgb(255, 255, 255);
 }
-
+hr {
+  width: 70%;
+  border: 2px solid rgb(70, 70, 70);
+}
 .choose-size {
+  color: rgb(237, 51, 48);
+  font-weight: 600;
   padding: 15px;
   font-size: 4vw;
   font-weight: bold;
 }
-
 .mxn-input {
   padding: 0px 50px;
 }
-
 .mxnRow,
 .mxnCol {
   display: flex;
@@ -63,18 +59,25 @@ input[disabled=""] {
   text-align: center;
   align-items: center;
   justify-content: center;
+  background: transparent;
+  box-shadow: 6px 6px 14px 0 rgba(0, 0, 0, 0.2),
+    -8px -8px 18px 0 rgba(255, 255, 255, 0.55);
+  border-radius: 40px;
+  margin: 10px 10px;
+  padding: 10px 10px;
 }
-
 .mspan,
 .nspan {
   font-size: 3.5vw;
   font-weight: bold;
   padding: 20px;
 }
-
 .mxn {
-  border: 0.4vw solid rgb(58, 52, 52);
-  border-radius: 10px;
+  border: 2px solid black;
+  background: white;
+  box-shadow: 6px 6px 14px 0 rgba(0, 0, 0, 0.2),
+    -8px -8px 18px 0 rgba(255, 255, 255, 0.55);
+  border-radius: 1vw;
   font-size: 6vw;
   margin: 1vw;
   width: 10vw;
@@ -83,11 +86,9 @@ input[disabled=""] {
   max-width: 70px;
   max-height: 70px;
 }
-
 .button-container {
   padding: 30px;
 }
-
 .button-empty-matrix,
 .button-submit,
 .refresh {
@@ -105,7 +106,6 @@ input[disabled=""] {
   border: none;
   transition: all 0.4s ease 0s;
 }
-
 .button-empty-matrix:hover,
 .button-submit:hover,
 .refresh:hover {
@@ -117,20 +117,19 @@ input[disabled=""] {
   box-shadow: 5px 40px -10px rgba(0, 0, 0, 0.57);
   transition: all 0.4s ease 0s;
 }
-
 .refresh {
   width: 50vw;
   max-width: 550px;
   margin: 20px;
 }
-
 .your-matrix,
 .rref-title {
+  color:rgb(237, 51, 48);
+  font-weight: 900;
   font-size: 3vw;
   font-weight: bold;
   padding: 15px;
 }
-
 .matrix,
 .rref-matrix {
   display: flex;
@@ -138,23 +137,27 @@ input[disabled=""] {
   align-items: center;
   justify-content: center;
   padding: 0px 20px 20px 20px;
+  margin: 10px;
+  background: transparent;
+  box-shadow: 6px 6px 14px 0 rgba(0, 0, 0, 0.2),
+    -8px -8px 18px 0 rgba(255, 255, 255, 0.55);
+  border-radius: 40px;
 }
-
 .matrix-container,
 .rref-matrix-container {
   padding: 3px;
-  border: 5px solid white;
   border-radius: 10px;
 }
-
 .cell {
   display: inline;
 }
-
 .inputs,
 .longInput {
-  border: 2px solid rgb(58, 52, 52);
-  border-radius: 10px;
+  border: 2px solid black;
+  background: white;
+  box-shadow: 6px 6px 14px 0 rgba(0, 0, 0, 0.2),
+    -8px -8px 18px 0 rgba(255, 255, 255, 0.55);
+  border-radius: 1vw;
   font-size: 4vw;
   margin: 1vw;
   width: 7vw;
@@ -196,7 +199,7 @@ input[disabled=""] {
     font-size: 34.72px; /* .035 x 992 */
   }
   .mxn {
-    border: 3.968px solid rgb(58, 52, 52);
+    /* border: 3.968px solid rgb(58, 52, 52); */
     font-size: 59.52px;
   }
   .your-matrix,

@@ -19,38 +19,60 @@
   </head>
   <body>
     <div class="main-container">
-      <div class="menu-container" dir="rtl">
+      <div class="header-menu-container" dir="rtl">
         <header>
           <span>Reduced Row Echelon Form Calculator</span> <br />
+          <hr>
           <p class="intro">
             !Convert your matrices into RREF fast, easy, and free
           </p>
+          <hr>
         </header>
-        <div class="size-container">
+        <div class="menu-container">
+          <div class="size-container">
+            <div class="col-size-container">
+              <label for="cols">:Choose col size</label>
+              <hr>
+              <div class="col-slider-value-box">
+                <span class="col-slider-value"></span>
+              </div>
+              <input
+                type="range"
+                min="1"
+                max="7"
+                value="2"
+                class="slider col-size"
+              />
+            </div>
 
-          <div class="col-size-container">
-            <label for="cols">:Choose col size</label>
-            <div class ="col-slider-value-box"><span class = 'col-slider-value'></span></div>
-            <input type="range" min="1" max="7" value="2" class="slider col-size">
+            <div class="row-size-container">
+              <label for="rows">:Choose row size</label>
+              <hr>
+              <div class="row-slider-value-box">
+                <span class="row-slider-value"></span>
+              </div>
+              <input
+                type="range"
+                min="1"
+                max="7"
+                value="2"
+                class="slider row-size"
+              />
+            </div>
           </div>
-
-          <div class="row-size-container">
-            <label for="rows">:Choose row size</label>
-            <div class ="row-slider-value-box"><span class = "row-slider-value"></span></div>
-            <input type="range" min="1" max="7" value="2" class="slider row-size">
-          </div>
-
+          <button class="calculate">Calculate</button>
         </div>
-        <button class="calculate">Calculate</button>
       </div>
 
       <div class="matrix-container">
         <div class="input-matrix-container">
           <span> Your Matrix:</span>
+          <hr>
           <div class="input-matrix"></div>
         </div>
         <div class="output-matrix-container">
           <span> Answer:</span>
+          <hr>
           <div class="output-matrix"></div>
         </div>
       </div>

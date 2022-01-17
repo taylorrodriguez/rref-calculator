@@ -144,7 +144,7 @@ function outputOutputMatrix() {
 
       div.className = "cell";
       input.setAttribute("type", "text");
-      input.setAttribute("disabled", "");
+      input.setAttribute("readonly", "");
       div.appendChild(input);
 
       // Test if value is a long decimal

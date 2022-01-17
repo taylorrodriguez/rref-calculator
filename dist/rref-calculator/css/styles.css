@@ -40,6 +40,13 @@ body {
   background-color: rgb(73, 73, 73);
   padding: 0px, 20px 20px 20px;
   height: 50%;
+  width: 100vw;
+}
+.header-menu-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
 }
 header {
   padding: 30px 0px;
@@ -48,10 +55,17 @@ header {
 }
 
 header span {
+  display: inline-block;
+  margin-bottom: 20px;
   font-size: 6vw;
 }
 .intro {
-  font-size: 3vw;
+  font-size: 15px;
+}
+hr {
+  width:80%;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(255, 255, 255);
 }
 label {
   text-align: center;
@@ -96,7 +110,7 @@ label {
 .slider::-moz-range-thumb {
   width: 25px;
   height: 25px;
-  background: rgb(78, 145, 245);
+  background-color: rgb(78, 145, 245);
   cursor: pointer;
 }
 .col-slider-value-box,
@@ -123,7 +137,7 @@ select {
 }
 .calculate {
   font-size: 4vw;
-  width: 20vw;
+  width: 200px;
   margin-bottom: 30px;
   padding: 10px;
   background-color: transparent;
@@ -197,7 +211,7 @@ input[disabled=""] {
   vertical-align: middle;
 }
 .longInput {
-  font-size: 2.5vw;
+  font-size: 1.5vw;
 }
 
 /********* MEDIA QUERIES ***********/
@@ -217,7 +231,7 @@ input[disabled=""] {
 
 @media only screen and (min-width: 768px) {
   .intro {
-    font-size: 23.04px;
+    font-size: 18px;
   }
   select {
     width: 70.6px;
@@ -234,14 +248,18 @@ input[disabled=""] {
   .main-container {
     flex-direction: row;
   }
-  .menu-container {
-    width: 40%;
-    flex-direction: column;
-    justify-content: flex-start;
-    height: 100vh;
+  .header-menu-container{
+    height:100vh;
+    width:40%;
     position: -webkit-sticky;
     position: sticky;
     top: 0;
+  }
+  .menu-container {
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height:100%;
   }
   .size-container {
     margin: 50px;

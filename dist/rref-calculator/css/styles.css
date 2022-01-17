@@ -1,219 +1,263 @@
 html {
   min-height: 100%;
-  min-width: 100%;
 }
+
+/******** FONTS ********/
+body {
+  font-family: "Roboto Condensed", sans-serif;
+}
+header span {
+  font-family: "Barlow Condensed", sans-serif;
+}
+/******** REOCCURRING COLORS ********/
 body,
-.button-empty-matrix,
-.button-submit,
-.refresh {
-  font-family: "Raleway", sans-serif;
+.calculate {
+  color: white;
 }
+header,
+.input-matrix,
+.output-matrix,
+.col-slider-value-box,
+.row-slider-value-box {
+  background-color: rgb(78, 145, 245);
+}
+/******** MAIN STYLING ********/
 body {
   margin: 0;
-  background-color: rgb(192, 192, 192);
-  background-repeat: round;
-  background-size: cover;
-  color: rgb(0, 0, 0);
+  background-color: rgb(212, 212, 212);
 }
-.grid-container {
-  display: grid;
-  grid-row-gap: 15px;
+.main-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
-.item {
+/******** MENU ********/
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(73, 73, 73);
+  padding: 0px, 20px 20px 20px;
+  height: 50%;
+}
+header {
+  padding: 30px 0px;
+  width: 100%;
+  text-align: center;
+}
+
+header span {
+  font-size: 6vw;
+}
+.intro {
+  font-size: 3vw;
+}
+label {
+  text-align: center;
+}
+.row-size-container,
+.col-size-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
+  font-size: 20px;
+}
+
+.slider {
+  -webkit-appearance: none;
+  direction: ltr;
+  border-radius: 5px;
+  width: 150px;
+  height: 25px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 5px;
+  width: 25px;
+  height: 25px;
+  background: rgb(78, 145, 245);
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: rgb(78, 145, 245);
+  cursor: pointer;
+}
+.col-slider-value-box,
+.row-slider-value-box {
+  display: flex;
+  justify-content: center;
+  font-weight: bolder;
+  align-items: center;
+  border-radius: 5px;
+  margin: 20px;
+  height: 50px;
+  width: 50px;
+}
+select {
+  width: 10vw;
+  height: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+.size-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.calculate {
+  font-size: 4vw;
+  width: 20vw;
+  margin-bottom: 30px;
+  padding: 10px;
+  background-color: transparent;
+  border: 4px solid white;
+  border-radius: 5px;
+  transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+}
+.calculate:hover {
+  box-shadow: 0 0 40px 40px rgb(78, 145, 245) inset;
+  cursor: pointer;
+}
+
+/******** MATRIX ********/
+.matrix-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  text-align: center;
   align-items: center;
   justify-content: center;
+  background-color: rgb(212, 212, 212);
+  height: 45vh;
 }
-header {
-  font-size: 3vw;
+.matrix-container span {
+  font-size: 4.5vw;
 }
+.input-matrix,
+.output-matrix {
+  margin: 30px;
+  padding: 10px;
+  border-radius: 5px;
+}
+.input-matrix-container,
+.output-matrix-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(153, 153, 153);
+  border-radius: 15px;
+  padding: 15px;
+  margin: 15px;
+}
+.output-matrix-container,
+.output-matrix {
+  display: none;
+}
+
+/******** INPUTS ********/
 input {
-  font-family: "Lato", sans-serif;
   text-align: center;
 }
 input[disabled=""] {
   color: black;
   background-color: rgb(255, 255, 255);
 }
-hr {
-  width: 70%;
-  border: 2px solid rgb(70, 70, 70);
-}
-.choose-size {
-  color: rgb(237, 51, 48);
-  font-weight: 600;
-  padding: 15px;
-  font-size: 4vw;
-  font-weight: bold;
-}
-.mxn-input {
-  padding: 0px 50px;
-}
-.mxnRow,
-.mxnCol {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  background: transparent;
-  box-shadow: 6px 6px 14px 0 rgba(0, 0, 0, 0.2),
-    -8px -8px 18px 0 rgba(255, 255, 255, 0.55);
-  border-radius: 40px;
-  margin: 10px 10px;
-  padding: 10px 10px;
-}
-.mspan,
-.nspan {
-  font-size: 3.5vw;
-  font-weight: bold;
-  padding: 20px;
-}
-.mxn {
-  border: 2px solid black;
-  background: white;
-  box-shadow: 6px 6px 14px 0 rgba(0, 0, 0, 0.2),
-    -8px -8px 18px 0 rgba(255, 255, 255, 0.55);
-  border-radius: 1vw;
-  font-size: 6vw;
-  margin: 1vw;
-  width: 10vw;
-  height: 10vw;
-  transition: all 0.2s ease 0s;
-  max-width: 70px;
-  max-height: 70px;
-}
-.button-container {
-  padding: 30px;
-}
-.button-empty-matrix,
-.button-submit,
-.refresh {
-  font-size: 3vw;
-  font-weight: bold;
-  width: 30vw;
-  max-width: 200px;
-  color: rgb(255, 255, 255);
-  text-transform: uppercase;
-  text-decoration: none;
-  background: rgb(237, 51, 48);
-  padding: 20px;
-  border-radius: 10px;
-  display: block;
-  border: none;
-  transition: all 0.4s ease 0s;
-}
-.button-empty-matrix:hover,
-.button-submit:hover,
-.refresh:hover {
-  cursor: pointer;
-  background: rgb(67, 67, 67);
-  letter-spacing: 2px;
-  -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
-  -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
-  box-shadow: 5px 40px -10px rgba(0, 0, 0, 0.57);
-  transition: all 0.4s ease 0s;
-}
-.refresh {
-  width: 50vw;
-  max-width: 550px;
-  margin: 20px;
-}
-.your-matrix,
-.rref-title {
-  color:rgb(237, 51, 48);
-  font-weight: 900;
-  font-size: 3vw;
-  font-weight: bold;
-  padding: 15px;
-}
-.matrix,
-.rref-matrix {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 0px 20px 20px 20px;
-  margin: 10px;
-  background: transparent;
-  box-shadow: 6px 6px 14px 0 rgba(0, 0, 0, 0.2),
-    -8px -8px 18px 0 rgba(255, 255, 255, 0.55);
-  border-radius: 40px;
-}
-.matrix-container,
-.rref-matrix-container {
-  padding: 3px;
-  border-radius: 10px;
-}
 .cell {
   display: inline;
 }
 .inputs,
 .longInput {
-  border: 2px solid black;
+  border: 2px solid rgb(255, 255, 255);
   background: white;
-  box-shadow: 6px 6px 14px 0 rgba(0, 0, 0, 0.2),
-    -8px -8px 18px 0 rgba(255, 255, 255, 0.55);
-  border-radius: 1vw;
-  font-size: 4vw;
-  margin: 1vw;
-  padding:0;
-  width: 7vw;
-  height: 7vw;
-  max-width: 60px;
-  max-height: 60px;
+  border-radius: 0.3vw;
+  font-size: 3vw;
+  margin: 0.5vw;
+  padding: 0;
+  width: 5.7vw;
+  height: 5.7vw;
+  max-width: 47.78px;
+  max-height: 47.78px;
   vertical-align: middle;
 }
 .longInput {
   font-size: 2.5vw;
 }
 
-/* MEDIA QUERIES */
+/********* MEDIA QUERIES ***********/
 
+@media only screen and (min-width: 500px) {
+  header span {
+    font-size: 46.08px;
+  }
+  .calculate {
+    font-size: 20px;
+  }
+  .matrix-container span {
+    font-size: 22.5px;
+  }
+}
 /* Medium devices (landscape tablets, 768px and up) */
 
 @media only screen and (min-width: 768px) {
-  .button-empty-matrix,
-  .button-submit,
-  .refresh {
-    font-size: 23.04px; /* .03 x 768 */
+  .intro {
+    font-size: 23.04px;
+  }
+  select {
+    width: 70.6px;
+    height: 30px;
   }
   .inputs {
     font-size: 30.72px; /* .04 x 768 */
-  }
-  .longInput {
-    font-size: 19.2px; /* .025 x 768 */
   }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 
 @media only screen and (min-width: 992px) {
-  .choose-size {
-    font-size: 39.68px; /* from 4vw --> .04 x 992 = 39.68 */
+  .main-container {
+    flex-direction: row;
   }
-  .mspan,
-  .nspan {
-    font-size: 34.72px; /* .035 x 992 */
+  .menu-container {
+    width: 40%;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100vh;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
   }
-  .mxn {
-    /* border: 3.968px solid rgb(58, 52, 52); */
-    font-size: 59.52px;
+  .size-container {
+    margin: 50px;
   }
-  .your-matrix,
-  .rref-title {
-    font-size: 29.76px; /* .03 x 992 */
-    padding: 20px;
+  .matrix-container {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 60%;
+    height: 100%;
   }
-}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-
-@media only screen and (min-width: 1200px) {
-  header {
-    font-size: 36px;
+  .input-matrix {
+    margin: 13px;
+  }
+  .output-matrix {
+    margin: 15px;
   }
 }

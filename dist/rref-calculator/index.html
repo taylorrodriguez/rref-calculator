@@ -2,41 +2,57 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>RREF Calculator</title>
     <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css?family=Raleway&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Lato&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&family=Roboto+Condensed:wght@300&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-    <div class="grid-container">
-      <header class="item">
-        <h1>Reduced Row-Echelon Form</h1>
-        <hr />
-      </header>
-      <span class="choose-size item">Choose the size of your Matrix</span>
-      <!-- Choose m and n, amount of rows and columns -->
-      <div class="mxn-input item">
-        <div class="mxnRow">
-          <span class="mspan">Number of rows: </span>
-          <input class="mxn" type="text" maxlength="1" />
+    <div class="main-container">
+      <div class="menu-container" dir="rtl">
+        <header>
+          <span>Reduced Row Echelon Form Calculator</span> <br />
+          <p class="intro">
+            !Convert your matrices into RREF fast, easy, and free
+          </p>
+        </header>
+        <div class="size-container">
+
+          <div class="col-size-container">
+            <label for="cols">:Choose col size</label>
+            <div class ="col-slider-value-box"><span class = 'col-slider-value'></span></div>
+            <input type="range" min="1" max="7" value="2" class="slider col-size">
+          </div>
+
+          <div class="row-size-container">
+            <label for="rows">:Choose row size</label>
+            <div class ="row-slider-value-box"><span class = "row-slider-value"></span></div>
+            <input type="range" min="1" max="7" value="2" class="slider row-size">
+          </div>
+
         </div>
-        <div class="mxnCol">
-          <span class="nspan">Number of cols: </span>
-          <input class="mxn" type="text" maxlength="1" />
-        </div>
+        <button class="calculate">Calculate</button>
       </div>
-      <!-- Make Button -->
-      <div class="button-container item">
-        <button class="button-empty-matrix">Make</button>
+
+      <div class="matrix-container">
+        <div class="input-matrix-container">
+          <span> Your Matrix:</span>
+          <div class="input-matrix"></div>
+        </div>
+        <div class="output-matrix-container">
+          <span> Answer:</span>
+          <div class="output-matrix"></div>
+        </div>
       </div>
     </div>
     <script src="js/app.js"></script>

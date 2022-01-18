@@ -40,7 +40,7 @@ body {
   background-color: rgb(73, 73, 73);
   padding: 0px, 20px 20px 20px;
   height: 50%;
-  width: 100vw;
+  width: 100%;
 }
 .header-menu-container {
   display: flex;
@@ -159,6 +159,7 @@ select {
   justify-content: center;
   background-color: rgb(212, 212, 212);
   height: 45vh;
+  width:100%;
 }
 .matrix-container span {
   font-size: 4.5vw;
